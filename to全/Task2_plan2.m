@@ -40,7 +40,7 @@ for i_SNR=1:length(SNR)
             Noise=zeros(N,T);
             for k=1:1:N
                 Noise(k,:)=(randn(1,T)+1j*randn(1,T))/sqrt(2);
-            end;
+            end
             X=as*S+Noise;       % 没信号条件下的数据
             %% baseline 1: 1_3
             phi12=angle(X(2,540)./X(1,540));%相位差
